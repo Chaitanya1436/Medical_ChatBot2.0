@@ -9,6 +9,10 @@
 
 ![Demo](attached_assets/generated_images/demovideo.gif)
 
+
+### Demo in normal speed
+![Demo in normal speed](attached_assets/generated_images/demovideo.mp4)
+
 ### 📄 Sample Generated Report
 ![Sample Report](attached_assets/generated_images/samplereport.png)
 
