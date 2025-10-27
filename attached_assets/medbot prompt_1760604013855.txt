@@ -1,0 +1,96 @@
+Build a fully static medical chatbot app with these exact components and features:
+
+1. User Input Phase (with exact options)
+Ask user Name as free text input.
+
+Ask user Gender using four radio buttons or selectable options:
+
+Male
+
+Female
+
+Other
+
+Prefer Not to Say
+
+Ask user Age Group with fixed dropdown or radio options:
+
+Infant (0–3 years)
+
+Child (4–10 years)
+
+Teen (11–18 years)
+
+Adult (19–30 years)
+
+Middle Age (31–60 years)
+
+Senior (60+ years)
+
+Ask user Weight (kg) as number input with a button or checkbox to Skip this input (weight can be empty/null).
+
+Ask user Height (cm) as number input with Skip option as well.
+
+2. Symptom Input Phase with NLP-based Correction and Extraction
+Ask for Main Symptom as free text input. User can type in full sentences, e.g., “I am having cold since morning.”
+
+Use fuzzy matching and spell correction for symptoms (e.g., using JS Fuse.js or own similarity function) to identify intended symptoms from a predefined symptom list.
+
+Ask next for Additional Symptoms (can input 0, 1 or multiple symptoms in a sentence). For example, user can say: “I also have fever and headache.”
+
+Ask again for Third symptom or allow skipping this input.
+
+If third symptom entered, ask how long this symptom lasted (free text or dropdown).
+
+After all symptoms inputs, display the corrected symptom names (post-NLP) for the user to verify before proceeding.
+
+3. Symptom Severity Rating
+For each detected symptom (up to 3), show a slider (0 to 10) for the user to indicate severity.
+
+Store the severity value per symptom.
+
+4. Disease Prediction Logic
+Use a weighted mapping from symptoms to diseases (provided in JSON or JS object).
+
+Calculate probable diseases considering symptom severity.
+
+If the predicted diseases include diabetes, heart disease, stroke or certain cancers, and if weight was skipped earlier, prompt the user again to input weight (mandatory now).
+
+5. Medication Recommendation
+For each predicted disease, associate a pool of medicines.
+
+Present at least two medicines per disease, randomly chosen and mixed (not fixed pairs).
+
+Suggest medicines suitable only for the user's age group if age is given.
+
+If age is skipped, show medicines separated clearly by age group categories (Infant, Child, Adult, Senior).
+
+Medicine dosage and timing depend on severity (higher severity means stronger medicines).
+
+Provide instructions on when to take medicines (e.g., morning, night, after food).
+
+6. Final Report Output
+Summarize user inputs: name, gender, age group, weight/height if given.
+
+List the three cleaned, verified symptoms.
+
+Show predicted diseases.
+
+Show age-appropriate medicines (minimum two) per disease with dosage and timing.
+
+Mention recommended specialist to consult.
+
+Include weight reminder note if applicable.
+
+Tech Stack
+Implement everything client-side only using HTML + CSS + JavaScript.
+
+Store all symptom–disease–medicine mapping as JSON or JS objects.
+
+Use a fuzzy matching library (like Fuse.js) in JS to simulate Python NLTK fuzzy matching and spell correction.
+
+Use slider UI components for severity ratings.
+
+Data is lost on page refresh — no backend or database needed.
+
+Include a five-step timeline progress bar on the top right to show phases completed.
