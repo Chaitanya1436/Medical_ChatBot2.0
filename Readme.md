@@ -7,7 +7,8 @@
 
 ## 🧠 Demo & Preview
 
-![Demo GIF](attached_assets/generated_images/demovideo.mp4)
+<video src="attached_assets/generated_images/demovideo.mp4" controls width="600"></video>
+
 
 ### 📄 Sample Generated Report  
 ![Sample Report](attached_assets/generated_images/samplereport.png)
